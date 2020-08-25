@@ -38,12 +38,6 @@ data['source'].value_counts()[:25].plot(kind='barh', figsize= (8,10) )
 data['date'].value_counts()[:25].plot(kind='barh', figsize= (8,10) )
 data['date'].value_counts()[:50]
 data['date'].describe()
-
-
-
-
-
-
 #Taking out the text from the dataset
 tex = data.loc[:,('text', 'user_location')]
 pd.crosstab(data.user_location)
