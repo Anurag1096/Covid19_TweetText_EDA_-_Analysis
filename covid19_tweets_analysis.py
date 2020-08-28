@@ -38,6 +38,7 @@ data['source'].value_counts()[:25].plot(kind='barh', figsize= (8,10) )
 data['date'].value_counts()[:25].plot(kind='barh', figsize= (8,10) )
 data['date'].value_counts()[:50]
 data['date'].describe()
+<<<<<<< HEAD
 
 #Taking out the text from the dataset
 tex = data.loc[:,('text')]
@@ -99,6 +100,19 @@ clf_compnb.score(test_x_vectors, y_test)
 
 
 
+=======
+#Taking out the text from the dataset
+tex = data.loc[:,('text', 'user_location')]
+pd.crosstab(data.user_location)
+#Sentiment analysis using Textblob
+from textblob import TextBlob
+import string
+tex = [doc.lower() for doc in tex]
+tex.len
+#tex = re.sub(r'http\S+', '', tex)
+#tex = re.sub(r'^https?:\/\/.*[\r\n]*', '', tex, flags=re.MULTILINE)
+tex = re.sub(r'\[[0-9]*\]',' ', tex[ :,0:1 ])
+>>>>>>> 1d7c796a8139d4cea74fc123bacfea5c5bf33253
 
 
 
